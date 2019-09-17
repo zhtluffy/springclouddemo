@@ -1,6 +1,6 @@
-package com.itszt.eurekaserverdemo.controller;
+package com.itszt.eurekaserver_provider.controller;
 
-import com.itszt.eurekaserverdemo.entity.User;
+import com.itszt.eurekaserver_provider.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping("user")
-    public User getUser(){
-        return new User("小白");
+    public String getUser(){
+        return "hello,xiaobai!";
     }
 }

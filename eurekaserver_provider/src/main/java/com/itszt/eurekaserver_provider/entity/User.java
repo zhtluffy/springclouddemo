@@ -1,4 +1,4 @@
-package com.itszt.eurekaserverdemo.entity;
+package com.itszt.eurekaserver_provider.entity;
 
 public class User {
     private String name;
