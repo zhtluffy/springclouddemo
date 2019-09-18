@@ -1,10 +1,11 @@
 package com.itszt.eurekaserver_consumer.controller;
 
 import com.itszt.eurekaserver_consumer.feign.FeignServer;
-import com.itszt.eurekaserver_provider.entity.User;
 import com.sun.research.ws.wadl.HTTPMethods;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -16,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 
 @RestController
+@RefreshScope
 public class ConsumerController {
 
     @Autowired
@@ -27,6 +29,15 @@ public class ConsumerController {
     @GetMapping("consumerUser2")
     public String consumerUser2() {
         return feignServer.getUser();
+    }
+
+    @Value("${newurl}")
+    private String url;
+
+    @GetMapping("consumerUser3")
+    public String consumerUser3() {
+        System.out.println("url = " + url);
+        return url;
     }
 
     @GetMapping("consumerUser")

@@ -1,0 +1,30 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: spring-cloud-config
+
+  rabbitmq:
+    host: 192.168.65.130
+    port: 5672
+    username: luffy
+    password: 123456
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhtluffy/cloudconfig.git
+          password: zhtluffy1998
+          username: zhtluffy
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    service-url: {"defaultZone": "http://localhost:8000/eureka/"}

@@ -18,6 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 @EnableHystrixDashboard
 @EnableCircuitBreaker
+
 public class EurekaserverConsumerApplication {
 
     @Bean
