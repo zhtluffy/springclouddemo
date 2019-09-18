@@ -4,9 +4,9 @@ import com.itszt.eurekaserver_consumer.feign.hystrix.FeignServerImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(value = "SPRING-CLOUD-EUREKA-PROVIDER",fallback = FeignServerImpl.class)
+@FeignClient(value = "SPRING-CLOUD-ZUUL",fallback = FeignServerImpl.class)
 public interface FeignServer {
 
-    @GetMapping("/user")
+    @GetMapping("/provider/user")
     String getUser();
 }

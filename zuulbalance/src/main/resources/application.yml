@@ -1,0 +1,16 @@
+server:
+  port: 10000
+
+zuul:
+  routes:
+    provider-api:
+      path: /provider/**
+      serviceId: spring-cloud-eureka-provider
+
+spring:
+  application:
+    name: spring-cloud-zuul
+
+eureka:
+  client:
+    service-url: {"defaultZone": "http://localhost:8000/eureka/"}
