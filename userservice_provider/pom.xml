@@ -3,23 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.itszt</groupId>
         <artifactId>springclouddemo</artifactId>
+        <groupId>com.itszt</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>zuulbalance</artifactId>
+    <artifactId>userservice_provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zuulbalance</name>
+    <name>userservice_provider</name>
     <description>Demo project for Spring Boot</description>
 
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.itszt</groupId>

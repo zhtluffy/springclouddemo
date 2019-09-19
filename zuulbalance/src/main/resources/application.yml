@@ -6,6 +6,12 @@ zuul:
     provider-api:
       path: /provider/**
       serviceId: spring-cloud-eureka-provider
+    user-api:
+      path: /user/**
+      serviceId: spring-cloud-userprovider
+    order-api:
+      path: /order/**
+      serviceId: spring-cloud-orderprovider
 
 spring:
   application:
