@@ -16,6 +16,8 @@ zuul:
 spring:
   application:
     name: spring-cloud-zuul
+  zipkin:
+    base-url: http://localhost:11000
 
 eureka:
   client:

@@ -7,6 +7,7 @@
         <module>eurekaserver_provider</module>
         <module>eurekaserver_consumer</module>
         <module>basespringclouddemo</module>
+        <module>zipkindemo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
