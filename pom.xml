@@ -8,6 +8,9 @@
         <module>eurekaserver_consumer</module>
         <module>basespringclouddemo</module>
         <module>zipkindemo</module>
+        <module>druiddemo</module>
+        <module>streamconsumer</module>
+        <module>streamprovider</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
